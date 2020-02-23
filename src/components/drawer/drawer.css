@@ -1,0 +1,87 @@
+.card-drawer-container {
+  width: 260px;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-top: 80px;
+  bottom: 0;
+  margin-bottom: 60px;
+}
+.card-drawer {
+  background: rgb(252, 252, 252);
+  color: #333333;
+  padding-top: 10px;
+  width: 260px;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: block;
+}
+.card-data-drawer-app {
+  width: 350px;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(252, 252, 252);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(238, 238, 238);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(228, 228, 228);
+}
+/* scrollbar */
+.drawer-footer {
+  height: 100%;
+
+  background: #031b4d;
+}
+.drawer-footer p {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 55px;
+  margin: 0;
+}
+.card-drawer h1,
+a {
+  margin: 0;
+  color: #333333;
+  text-decoration: none;
+}
+.btnLinkMenu {
+  padding: 12px 12px 18px;
+  border-radius: 6px 0px 0px 6px;
+  color: #333333;
+  font-size: 16px;
+  display: block;
+  font-weight: 600;
+  border-right: 5px solid rgb(252, 252, 252);
+}
+.btnLinkMenu--active {
+  color: rgb(27, 94, 79);
+  background: rgba(27, 94, 79, 0.15);
+  font-weight: bold;
+  transition: color 0.1s ease-in-out;
+  border-right: 5px solid rgb(27, 94, 79);
+}
+.menu-icon {
+  position: relative;
+  bottom: -6px;
+  margin-right: 8px;
+}
+.sub-drawer {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 50px;
+  width: 200px;
+}

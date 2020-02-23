@@ -1,0 +1,39 @@
+.navbar-app {
+  padding: 12px 30px;
+  background: #031b4d;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 5px 5px 10px rgba(92, 91, 91, 0.5);
+}
+.navbar-app h1 {
+  color: #ffffff;
+  padding-left: 20px;
+  margin: 0;
+}
+.card-brand {
+  display: flex;
+}
+.card-navbar-menu {
+  display: flex;
+}
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+}
+.navbar-icon,
+li {
+  align-items: center;
+  padding: 5px;
+  display: flex;
+  text-align: center;
+}

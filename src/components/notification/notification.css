@@ -1,0 +1,51 @@
+.card-notification {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.card-data-notification {
+  height: 0px;
+  cursor: default;
+  width: 0px;
+  font-size: 0px !important;
+  background-color: #f9f9f9;
+  right: 0;
+  color: #000000;
+  position: absolute;
+  border-radius: 6px;
+}
+.transform-notification {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.transform-notification-active {
+  height: 300px;
+  width: 400px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  right: 0;
+  font-size: 18px !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 20px;
+}
+.transform-notification-active h3 {
+  text-align: left;
+  margin: 0;
+}
+.card-title-notification {
+  display: block;
+}
+.title-notification {
+  justify-content: space-between;
+  padding: 0px;
+}
+.close-notif {
+  border-radius: 100px;
+  cursor: pointer;
+  color: #333;
+}

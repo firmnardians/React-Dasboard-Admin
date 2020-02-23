@@ -1,0 +1,23 @@
+.card-detail-account {
+  padding-bottom: 20px;
+  display: block;
+}
+.detail-info-account {
+  width: 50%;
+}
+.detail-info-account h3 {
+  color: rgb(117, 117, 117);
+}
+.data-info-account {
+  width: 50%;
+}
+.trigger-info-account {
+  width: 50%;
+}
+.trigger-info-account h3 {
+  float: right;
+  color: rgb(27, 94, 79);
+}
+.card-account {
+  border-bottom: 1px solid #dadce0;
+}
