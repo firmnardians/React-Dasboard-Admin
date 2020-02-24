@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ButtonBig from "../../components/button/ButtonBig";
-import "../modal/modal.css";
+import "./createOutlet.css";
 
 export class CreateOutlet extends Component {
   constructor(props) {
@@ -29,11 +29,33 @@ export class CreateOutlet extends Component {
         <div
           className={
             this.state.active
-              ? "modal transition"
-              : "modal transition modal-active"
+              ? "modalCreateOutlet transition"
+              : "modalCreateOutlet transition modalCreateOutlet-active"
           }
         >
-          <h2>Create new outlet</h2>
+          <div className="modal-title">
+            <h2>Create Outlet</h2>
+          </div>
+          <div className="modal-content">
+            <p>test</p>
+          </div>
+          <div className="modal-footer">
+            <div className="card-flex">
+              <div className="card-grid-modal">
+                <div
+                  className="discard-button-modal"
+                  onClick={this.createOutlet}
+                >
+                  <h4>Discard</h4>
+                </div>
+              </div>
+              <div className="card-grid-modal">
+                <div className="save-button-modal" onClick={this.createOutlet}>
+                  <h4>Save</h4>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <ButtonBig title="Create Outlet" onClick={this.createOutlet} />

@@ -1,0 +1,134 @@
+.transition {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.overlay {
+  height: 0vh;
+  width: 0vw;
+  background: rgba(0, 0, 0, 0.502);
+  opacity: 0.9;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.overlay-active {
+  transition: opacity 0.05s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  width: 110%;
+  overflow: hidden;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.modalCreateOutlet {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50px);
+  background: rgb(255, 255, 255);
+  border-radius: 8px;
+  z-index: 10;
+  font-size: 0;
+}
+.modalCreateOutlet-active {
+  height: 450px;
+  width: 600px;
+  font-size: 21px;
+}
+.modalCreateOutlet-title {
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.modalCreateOutlet-title h2 {
+  color: #000000;
+}
+.modalCreateOutlet-content {
+  padding: 20px 30px;
+}
+.modalCreateOutlet-footer {
+  position: fixed;
+  padding: 20px 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.card-grid-modal {
+  margin-right: 40px;
+}
+.discard-button-modal {
+  padding: 0;
+  font-weight: 600;
+  color: rgb(160, 52, 52);
+  cursor: pointer;
+}
+.discard-button-modal h4 {
+  margin: 0;
+}
+.save-button-modal {
+  padding: 0;
+  font-weight: 600;
+  color: rgb(52, 77, 160);
+  cursor: pointer;
+}
+.save-button-modal h4 {
+  margin: 0;
+}
+/* Input modal */
+.card-input-modal {
+  position: relative;
+  margin-top: 30px;
+}
+.modal-input {
+  display: none;
+  outline: none;
+  padding: 13px 8px;
+  border: 2px solid #dddddd;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.modal-input-active {
+  display: block;
+}
+
+.card-input-modal .modal-input:valid + .label-modal {
+  top: -10px;
+  padding: 0 3px;
+  color: #6e6c6c;
+  left: 10px;
+}
+.card-input-modal .modal-input:focus {
+  border: 2px solid royalblue;
+}
+.card-input-modal .modal-input:focus + .label-modal {
+  top: -10px;
+  padding: 0 3px;
+  color: royalblue;
+  left: 10px;
+}
+
+.card-input-modal .label-modal {
+  transition: 0.1s;
+  color: #b1aeae;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ffffff;
+}
+.label-modal h4 {
+  margin: 0;
+  font-weight: normal;
+}
+/* Input modal */
