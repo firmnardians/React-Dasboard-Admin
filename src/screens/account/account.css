@@ -11,13 +11,7 @@
 .data-info-account {
   width: 50%;
 }
-.trigger-info-account {
-  width: 50%;
-}
-.trigger-info-account h3 {
-  float: right;
-  color: rgb(27, 94, 79);
-}
+
 .card-account {
   border-bottom: 1px solid #dadce0;
 }

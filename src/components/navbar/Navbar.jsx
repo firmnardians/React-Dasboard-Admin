@@ -14,7 +14,7 @@ class Navbar extends Component {
           <div className="card-navbar-menu">
             <ul className="navbar-list">
               <li className="sm-none">
-                <CreateOutlet title="Create Outlet" />
+                <CreateOutlet />
               </li>
               <li>
                 <Notification />
