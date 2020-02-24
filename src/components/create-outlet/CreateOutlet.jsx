@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ButtonBig from "../../components/button/ButtonBig";
 import "../modal/modal.css";
 
 export class CreateOutlet extends Component {
@@ -38,12 +39,7 @@ export class CreateOutlet extends Component {
           <h2>Create new outlet</h2>
         </div>
 
-        <div
-          className="btn-primary mr-20 cursor-pointer"
-          onClick={this.createOutlet}
-        >
-          {this.props.title}
-        </div>
+        <ButtonBig title="Create Outlet" onClick={this.createOutlet} />
       </>
     );
   }
