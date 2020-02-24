@@ -17,9 +17,6 @@ export class CreateOutlet extends Component {
     }));
   }
 
-  componentDidMount() {
-    window.addEventListener("popstate", this.createOutlet);
-  }
   render() {
     return (
       <>
