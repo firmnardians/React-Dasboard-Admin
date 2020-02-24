@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonBig(props) {
+const ButtonBig = props => {
   return (
     <>
       <div
@@ -11,6 +11,6 @@ function ButtonBig(props) {
       </div>
     </>
   );
-}
+};
 
 export default ButtonBig;

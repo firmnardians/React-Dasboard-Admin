@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonMedium(props) {
+const ButtonMedium = props => {
   return (
     <>
       <div
@@ -11,6 +11,6 @@ function ButtonMedium(props) {
       </div>
     </>
   );
-}
+};
 
 export default ButtonMedium;

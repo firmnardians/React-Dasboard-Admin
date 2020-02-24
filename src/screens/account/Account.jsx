@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ButtonBig from "../../components/button/ButtonBig";
 import "./account.css";
 import "../../components/modal/modal.css";
+import DetailAccount from "../../components/account/detail-account/DetailAccount";
 
 // Start - Data dummy untuk regiter dan last login
 let dataMonth = [
@@ -82,71 +83,17 @@ export class Account extends Component {
 
         <div className="card-app">
           <div className="card-detail-account">
-            <div className="card-account">
-              <div className="card-flex">
-                <div className="detail-info-account">
-                  <h3>Name</h3>
-                </div>
-                <div className="data-info-account">
-                  <h3>{this.state.name}</h3>
-                </div>
-              </div>
-            </div>
+            <DetailAccount title="Name" name={this.state.name} />
 
-            <div className="card-account">
-              <div className="card-flex">
-                <div className="detail-info-account">
-                  <h3>Phone Number</h3>
-                </div>
-                <div className="data-info-account">
-                  <h3>{this.state.number}</h3>
-                </div>
-              </div>
-            </div>
+            <DetailAccount title="Phone Number" name={this.state.number} />
 
-            <div className="card-account">
-              <div className="card-flex">
-                <div className="detail-info-account">
-                  <h3>Email</h3>
-                </div>
-                <div className="data-info-account">
-                  <h3>{this.state.email}</h3>
-                </div>
-              </div>
-            </div>
+            <DetailAccount title="Email" name={this.state.email} />
 
-            <div className="card-account">
-              <div className="card-flex">
-                <div className="detail-info-account">
-                  <h3>Password</h3>
-                </div>
-                <div className="data-info-account">
-                  <h3 type="password">{dummyPass}</h3>
-                </div>
-              </div>
-            </div>
+            <DetailAccount title="Password" name={dummyPass} />
 
-            <div className="card-account">
-              <div className="card-flex">
-                <div className="detail-info-account">
-                  <h3>Registration</h3>
-                </div>
-                <div className="data-info-account">
-                  <h3>{this.state.regisDate}</h3>
-                </div>
-              </div>
-            </div>
+            <DetailAccount title="Registration" name={this.state.regisDate} />
 
-            <div className="card-account">
-              <div className="card-flex">
-                <div className="detail-info-account">
-                  <h3>Last Login</h3>
-                </div>
-                <div className="data-info-account">
-                  <h3>{this.state.lastLogin}</h3>
-                </div>
-              </div>
-            </div>
+            <DetailAccount title="Last Login" name={this.state.lastLogin} />
           </div>
           <ButtonBig title="Edit Profile" onClick={this.editProfile} />
 
