@@ -1,50 +1,153 @@
 import React, { Component } from "react";
+import Overlay from "../../components/overlay/Overlay";
+import "../../components/modal/modal.css";
+import Empty from "../../components/empty/Empty";
+import { v4 as uuidv4 } from "uuid";
 
 export class AddCategory extends Component {
   constructor(props) {
     super(props);
+    this.input = React.createRef();
     this.state = {
-      isModalOpen: false,
-      titleCategory: "",
-      allCategory: JSON.parse(localStorage.getItem("category")) || [],
-      showTodoType: "all",
-      searchTerm: "",
-      showDetailModal: false,
-      showDetailIsOf: ""
+      category: [],
+      isModal: true
     };
   }
 
-  toggleModal = () => {
+  modalCategory = () => {
     this.setState({
-      isModalOpen: !this.state.isModalOpen
+      isModal: !this.state.isModal
     });
   };
 
-  onTitleChange = titleCategory => {
-    this.setState({ titleCategory });
-  };
+  addTask = () => {
+    const Items = {
+      id: uuidv4(),
+      value: this.input.current.value,
+      Date: new Date().toUTCString()
+    };
 
-  createCategory = () => {
-    let categoryList = [];
-    let categoryItem = {};
-    let { titleCategory } = this.state;
-
-    if (!titleCategory) return;
-    //mendapatkan localstorage yang tersimpan sebelumnya
-    const previousList = JSON.parse(localStorage.getItem("category"));
-    if (previousList !== "" && Array.isArray(previousList)) {
-      categoryList = [...previousList];
+    if (localStorage.getItem("category") == null) {
+      const category = [];
+      category.push(Items);
+      localStorage.setItem("category", JSON.stringify(category));
+    } else {
+      const category = JSON.parse(localStorage.getItem("category"));
+      category.push(Items);
+      localStorage.setItem("category", JSON.stringify(category));
     }
-
-    //menghasilkan id berdasarkan milisecond
-    const d = new Date();
-    const id = d.valueOf();
-    categoryItem = { id: id, titleCategory };
-    categoryList.push(categoryItem);
+    this.setState({
+      category: JSON.parse(localStorage.getItem("category"))
+    });
+    this.modalCategory();
   };
 
+  componentDidMount() {
+    const category = window.localStorage.getItem("category");
+    const parsedcategory = JSON.parse(category);
+    if (category == null) {
+      return false;
+    } else {
+      this.setState({
+        category: parsedcategory
+      });
+    }
+  }
+
+  deleteCategory = event => {
+    let index = event.target.getAttribute("data-key");
+    let categoryValue = JSON.parse(localStorage.getItem("category"));
+    categoryValue.splice(index, 1);
+    this.setState({ category: categoryValue });
+    localStorage.setItem("category", JSON.stringify(categoryValue));
+  };
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Overlay className={this.state.isModal} onClick={this.modalCategory} />
+
+        {/* Modal start */}
+        <div
+          className={
+            this.state.isModal ? "modal" : "modal transition modal-active"
+          }
+        >
+          {/* header modal */}
+          <div className="modal-title">
+            <h2>Create category</h2>
+          </div>
+          {/* header modal */}
+
+          {/* content modal */}
+          <div className="modal-content">
+            <div className="card-input-modal">
+              <input
+                className={
+                  this.state.isModal
+                    ? "modal-input"
+                    : "modal-input transition modal-input-active"
+                }
+                type="text"
+                name="category"
+                id="inputModalCategory"
+                ref={this.input}
+              />
+              <label htmlFor="inputModalCategory" className="label-modal">
+                <h4>New Category</h4>
+              </label>
+            </div>
+          </div>
+          {/* content modal */}
+
+          {/* Footer modal */}
+          <div className="modal-footer">
+            <div className="card-flex">
+              <div className="card-grid-modal">
+                <div
+                  className="discard-button-modal"
+                  onClick={this.modalCategory}
+                >
+                  <h4>Discard</h4>
+                </div>
+              </div>
+              <div className="card-grid-modal">
+                <div className="save-button-modal" onClick={this.addTask}>
+                  <h4>Save</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Footer modal */}
+        </div>
+        {/* Modal Finish */}
+
+        <Empty
+          titleEmpty="You don't have a category product"
+          titleButton="
+          Create category"
+          onClick={this.modalCategory}
+        />
+        <ol>
+          {this.state.category.map((item, index) => {
+            return (
+              <table>
+                <td key={item.id}>
+                  {item.value} - {item.Date}
+                  <button
+                    type="button"
+                    value="delete"
+                    data-key={index}
+                    onClick={this.deleteCategory}
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </table>
+            );
+          })}
+        </ol>
+      </div>
+    );
   }
 }
 

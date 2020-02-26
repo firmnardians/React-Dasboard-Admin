@@ -24,7 +24,7 @@ const ModalAddProduct = props => {
                   : "modal-input transition modal-input-active"
               }
               type="text"
-              name="password"
+              name="category"
               id="inputModalCategory"
               ref={props.ref}
             />
