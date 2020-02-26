@@ -1,0 +1,15 @@
+.text-area-group {
+  position: relative;
+  margin-top: 20px;
+}
+.text-area {
+  display: none;
+  outline: none;
+  padding: 13px 8px;
+  border: 2px solid #dddddd;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.text-area-active {
+  display: block;
+}

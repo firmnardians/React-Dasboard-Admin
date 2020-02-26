@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Empty from "../../components/empty/Empty";
+
+import AddBusiness from "../../controllers/add-business/AddBusiness";
 
 export class Business extends Component {
   render() {
@@ -9,10 +10,7 @@ export class Business extends Component {
           <h1>My Business</h1>
         </div>
 
-        <Empty
-          titleEmpty="Kamu tidak memiliki bisnis"
-          titleButton="Buat bisnis baru"
-        />
+        <AddBusiness />
       </div>
     );
   }
