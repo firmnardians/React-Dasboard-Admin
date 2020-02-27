@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonBig from "../../button/ButtonBig";
 import "./CardBusiness.css";
 
 const CardBusiness = props => {
@@ -6,11 +7,15 @@ const CardBusiness = props => {
     <>
       <div className="card-business-app">
         <div className="card-business-title">
-          <h4>{props.title}</h4>
+          <h4>{props.data.title}</h4>
         </div>
         <div className="card-business-description">
-          <p>{props.description}</p>
+          <p>{props.data.description}</p>
         </div>
+        <ButtonBig
+          onClick={() => props.removeBusiness(props.data.id)}
+          title="Remove"
+        />
       </div>
     </>
   );

@@ -5,6 +5,7 @@ import "../../components/modal/modal.css";
 import Input from "../../components/input/Input";
 import TextArea from "../../components/text-area/TextArea";
 import CardBusiness from "../../components/card/card-business/CardBusiness";
+import axios from "axios";
 
 export class AddBusiness extends Component {
   constructor(props) {
@@ -21,14 +22,27 @@ export class AddBusiness extends Component {
     });
   };
 
-  componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then(response => response.json())
-      .then(json =>
+  getDataAPI = () => {
+    axios
+      .get("http://localhost:3004/business")
+      .then(response => {
         this.setState({
-          business: json
-        })
-      );
+          business: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
+
+  clickRemoveBusiness = data => {
+    axios.delete(`http://localhost:3004/business/${data}`).then(() => {
+      this.getDataAPI();
+    });
+  };
+
+  componentDidMount() {
+    this.getDataAPI();
   }
 
   render() {
@@ -99,8 +113,8 @@ export class AddBusiness extends Component {
           return (
             <CardBusiness
               key={item.id}
-              title={item.title}
-              description={item.body}
+              data={item}
+              removeBusiness={this.clickRemoveBusiness}
             />
           );
         })}
