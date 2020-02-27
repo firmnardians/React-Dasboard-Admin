@@ -5,9 +5,10 @@ import "./CardBusiness.css";
 const CardBusiness = props => {
   return (
     <>
-      <div className="card-business-app">
+      <div key={props.id} className="card-business-app">
         <div className="card-business-title">
           <h4>{props.data.title}</h4>
+          <p>{props.data.id}</p>
         </div>
         <div className="card-business-description">
           <p>{props.data.description}</p>

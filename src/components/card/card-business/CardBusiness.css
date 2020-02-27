@@ -1,6 +1,5 @@
 .card-business-app {
-  height: 200px;
-  width: 200px;
+  height: auto;
   padding: 20px;
   border-radius: 4px;
   margin: 10px;

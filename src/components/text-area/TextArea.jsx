@@ -12,6 +12,7 @@ const TextArea = props => {
           cols={props.cols}
           placeholder={props.placeholder}
           rows={props.rows}
+          onChange={props.onChange}
         ></textarea>
       </div>
     </>

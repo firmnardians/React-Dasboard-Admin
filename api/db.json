@@ -1,46 +1,5 @@
 {
-  "business": [
-    {
-      "id": 2,
-      "title": "Ayam Geprek Bandung 2",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 4,
-      "title": "Ayam Geprek Bandung 4",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 5,
-      "title": "Ayam Geprek Bandung 5",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 6,
-      "title": "Ayam Geprek Bandung 6",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 7,
-      "title": "Ayam Geprek Bandung 7",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 8,
-      "title": "Ayam Geprek Bandung 8",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 9,
-      "title": "Ayam Geprek Bandung 9",
-      "description": "Business keluarga cemara"
-    },
-    {
-      "id": 10,
-      "title": "Ayam Geprek Bandung 10",
-      "description": "Business keluarga cemara"
-    }
-  ],
+  "business": [],
   "comments": [
     {
       "id": 1,
