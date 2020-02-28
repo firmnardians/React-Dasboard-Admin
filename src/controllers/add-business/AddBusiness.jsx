@@ -15,9 +15,10 @@ export class AddBusiness extends Component {
       hideOverlayModal: true,
       isLoading: true,
       isEmpty: true,
+      isUpdate: false,
 
       createBusiness: {
-        id: 1,
+        id: "",
         title: "",
         description: ""
       }
@@ -53,6 +54,33 @@ export class AddBusiness extends Component {
       .then(() => {
         // console.log(result);
         this.getDataAPI();
+        this.setState({
+          createBusiness: {
+            id: "",
+            title: "",
+            description: ""
+          }
+        });
+      });
+  };
+
+  putDataAPI = () => {
+    axios
+      .put(
+        `http://localhost:3004/business/${this.state.createBusiness.id}`,
+        this.state.createBusiness
+      )
+      .then(() => {
+        // console.log(result);
+        this.getDataAPI();
+        this.setState({
+          isUpdate: !this.state.isUpdate,
+          createBusiness: {
+            id: "",
+            title: "",
+            description: ""
+          }
+        });
       });
   };
 
@@ -63,8 +91,10 @@ export class AddBusiness extends Component {
     // console.log("cek onchange", event.target.value);
     let newCreateBusiness = { ...this.state.createBusiness }; // mengcopy / duplicat ke varibel baru
     // console.log(event.target.name);
+    if (!this.state.isUpdate) {
+      newCreateBusiness["id"] = getId;
+    }
 
-    newCreateBusiness["id"] = getId;
     newCreateBusiness[event.target.name] = event.target.value;
 
     this.setState(
@@ -83,11 +113,26 @@ export class AddBusiness extends Component {
     });
   };
 
-  clickSubmitBusiness = () => {
-    // console.log("submit work");
-    // console.log(this.state.createBusiness);
-    this.postDataAPI();
+  clickUpdateBusiness = data => {
     this.clickModalOverlay();
+    this.setState({
+      createBusiness: data,
+      isUpdate: !this.state.isUpdate
+    });
+
+    // console.log(data);
+  };
+
+  clickSubmitBusiness = () => {
+    if (this.state.isUpdate) {
+      this.putDataAPI();
+      this.clickModalOverlay();
+    } else {
+      // console.log("submit work");
+      // console.log(this.state.createBusiness);
+      this.postDataAPI();
+      this.clickModalOverlay();
+    }
   };
 
   componentDidMount() {
@@ -126,6 +171,7 @@ export class AddBusiness extends Component {
               title="Title"
               type="text"
               name="title"
+              value={this.state.createBusiness.title}
               onChange={this.handleCreateBusiness}
             />
             <TextArea
@@ -135,6 +181,7 @@ export class AddBusiness extends Component {
                   : "text-area transition text-area-active"
               }
               name="description"
+              value={this.state.createBusiness.description}
               placeholder="Deskripsi"
               onChange={this.handleCreateBusiness}
             />
@@ -171,6 +218,7 @@ export class AddBusiness extends Component {
                       key={item.id}
                       data={item}
                       removeBusiness={this.clickRemoveBusiness}
+                      updateBusiness={this.clickUpdateBusiness}
                     />
                   </div>
                 );

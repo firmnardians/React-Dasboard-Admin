@@ -17,6 +17,11 @@ const CardBusiness = props => {
           onClick={() => props.removeBusiness(props.data.id)}
           title="Remove"
         />
+        <ButtonBig
+          onClick={() => props.updateBusiness(props.data)}
+          title="Update"
+          className="mt-20"
+        />
       </div>
     </>
   );
