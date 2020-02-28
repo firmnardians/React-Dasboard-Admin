@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import ButtonBig from "../../components/button/ButtonBig";
-import "./account.css";
-import "../../components/modal/modal.css";
-import DetailAccount from "../../components/account/detail-account/DetailAccount";
+import ButtonBig from "../../components/Button/ButtonBig";
+import DetailAccount from "../../components/Account/DetailAccount/DetailAccount";
+
+import "./Account.css";
+import "../../components/Modal/Modal.css";
 
 // Start - Data dummy untuk regiter dan last login
 let dataMonth = [

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Table from "./table/Table";
 
 export class Billing extends Component {
   constructor(props) {
@@ -27,7 +26,6 @@ export class Billing extends Component {
               ))}
             </select>
           </div>
-          <Table />
         </div>
       </div>
     );

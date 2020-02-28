@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import AddCategory from "../../controllers/add-category/AddCategory";
+import AddCategory from "../../controllers/AddCategory/AddCategory";
 
 export class ProductCategory extends Component {
   render() {

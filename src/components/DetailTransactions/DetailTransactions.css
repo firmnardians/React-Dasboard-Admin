@@ -1,0 +1,10 @@
+.card-count-data {
+  display: inline-block;
+  padding-left: 10px;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+.card-number-data {
+  font-weight: bold;
+  font-size: 2em;
+}

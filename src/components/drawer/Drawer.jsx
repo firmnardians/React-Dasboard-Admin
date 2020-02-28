@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
-import "./drawer.css";
+import "./Drawer.css";
 
 class Drawer extends Component {
   render() {

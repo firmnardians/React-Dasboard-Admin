@@ -1,10 +1,11 @@
 import React from "react";
+import "./Button.css";
 
 const ButtonBig = props => {
   return (
     <>
       <div
-        className={`btn-primary mr-20 cursor-pointer ds-inline-blok ${props.className}`}
+        className={`btn btn-primary cursor-pointer ds-inline-blok ${props.className}`}
         onClick={props.onClick}
       >
         {props.title}

@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import ButtonBig from "../../components/button/ButtonBig";
-import Overlay from "../../components/overlay/Overlay";
-import "../../components/modal/modal.css";
-import Input from "../../components/input/Input";
-import TextArea from "../../components/text-area/TextArea";
-import CardBusiness from "../../components/card/card-business/CardBusiness";
+import ButtonBig from "../../components/Button/ButtonBig";
+import Overlay from "../../components/Overlay/Overlay";
+import Input from "../../components/Input/Input";
+import TextArea from "../../components/TextArea/TextArea";
+import CardBusiness from "../../components/Card/CardBusiness/CardBusiness";
 import axios from "axios";
+
+import "../../components/Modal/Modal.css";
 
 export class AddBusiness extends Component {
   constructor(props) {
@@ -140,9 +141,6 @@ export class AddBusiness extends Component {
   }
 
   render() {
-    if (this.state.isLoading) {
-      return <p>Loading....</p>;
-    }
     return (
       <>
         <Overlay
@@ -208,22 +206,26 @@ export class AddBusiness extends Component {
 
         <ButtonBig title="Buat bisnis baru" onClick={this.clickModalOverlay} />
 
-        <div className="card-flex">
-          <div className="row">
-            {this.state.isEmpty &&
-              this.state.business.map(item => {
-                return (
-                  <div key={item.id} className="column">
-                    <CardBusiness
-                      key={item.id}
-                      data={item}
-                      removeBusiness={this.clickRemoveBusiness}
-                      updateBusiness={this.clickUpdateBusiness}
-                    />
-                  </div>
-                );
-              })}
-            {!this.state.isEmpty && <p>Data Kosong</p>}
+        <div className="mt-20">
+          <div className="card-flex">
+            <div className="row">
+              {!this.state.isLoading ? (
+                this.state.business.map(item => {
+                  return (
+                    <div key={item.id} className="column">
+                      <CardBusiness
+                        key={item.id}
+                        data={item}
+                        removeBusiness={this.clickRemoveBusiness}
+                        updateBusiness={this.clickUpdateBusiness}
+                      />
+                    </div>
+                  );
+                })
+              ) : (
+                <p>Loading...</p>
+              )}
+            </div>
           </div>
         </div>
       </>

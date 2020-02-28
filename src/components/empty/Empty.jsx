@@ -1,6 +1,6 @@
 import React from "react";
-import ButtonBig from "../button/ButtonBig";
-import "./empty.css";
+import ButtonBig from "../Button/ButtonBig";
+import "./Empty.css";
 
 const Empty = props => {
   return (

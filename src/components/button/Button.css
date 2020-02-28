@@ -1,0 +1,26 @@
+.btn {
+  padding: 12px 18px;
+  color: #ffffff;
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+.btn-primary {
+  background: rgb(27, 94, 79);
+}
+.btn-sucess {
+  background: rgb(47, 96, 201);
+}
+.btn-warning {
+  background: rgb(163, 122, 33);
+}
+.btn-danger {
+  background: rgb(155, 43, 58);
+}
+.btn-medium {
+  font-size: 16px;
+  padding: 8px 14px;
+}
+.btn-small {
+  padding: 6px 8px;
+  font-size: 0.9em;
+}

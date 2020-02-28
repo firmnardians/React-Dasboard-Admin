@@ -1,19 +1,20 @@
 import React from "react";
-import Navbar from "./components/navbar/Navbar";
-import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from "./screens/dashboard/Dashboard";
-import Report from "./screens/report/Report";
-import Account from "./screens/account/Account";
-import Drawer from "./components/drawer/Drawer";
-import Business from "./screens/business/Business";
-import Employee from "./screens/employee/Employee";
-import Promo from "./screens/promo/Promo";
-import Billing from "./screens/billing/Billing";
-import TaxServices from "./screens/tax-services/TaxServices";
-import Inventory from "./screens/inventory/Inventory";
-import ProductItem from "./screens/product-item/ProductItem";
-import ProductCategory from "./screens/product-category/ProductCategory";
+import Navbar from "./components/Navbar/Navbar";
+import Drawer from "./components/Drawer/Drawer";
+import Dashboard from "./screens/Dashboard/Dashboard";
+import Report from "./screens/Report/Report";
+import Account from "./screens/Account/Account";
+import Business from "./screens/Business/Business";
+import Employee from "./screens/Employee/Employee";
+import Promo from "./screens/Promo/Promo";
+import Billing from "./screens/Billing/Billing";
+import TaxServices from "./screens/TaxServices/TaxServices";
+import Inventory from "./screens/Inventory/Inventory";
+import ProductItem from "./screens/ProductItem/ProductItem";
+import ProductCategory from "./screens/ProductCategory/ProductCategory";
+
+import "./App.css";
 
 function App() {
   return (

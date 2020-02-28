@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./navbar.css";
-import Notification from "../notification/notification";
-import CreateOutlet from "../create-outlet/CreateOutlet";
+import Notification from "../Notification/Notification";
+import CreateOutlet from "../CreateOutlet/CreateOutlet";
+import "./Navbar.css";
 
 class Navbar extends Component {
   render() {

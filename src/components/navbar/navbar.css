@@ -37,3 +37,6 @@ li {
   display: flex;
   text-align: center;
 }
+.padding-top-navbar-fixed {
+  height: 80px;
+}

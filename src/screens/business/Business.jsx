@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-import AddBusiness from "../../controllers/add-business/AddBusiness";
+import AddBusiness from "../../controllers/AddBusiness/AddBusiness";
 
 export class Business extends Component {
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DetailTransactions from "../../components/detail-transactions/DetailTransactions";
+import DetailTransactions from "../../components/DetailTransactions/DetailTransactions";
 
 class Report extends Component {
   render() {
@@ -10,7 +10,25 @@ class Report extends Component {
             <h1>Report</h1>
           </div>
           <div className="card-app">
-            <DetailTransactions />
+            <div className="card-sub-app mb-20 text-center">
+              <div className="card-flex">
+                <div className="card-grid">
+                  <DetailTransactions title="Total transaksi" number="0" />
+                </div>
+                <div className="card-grid">
+                  <DetailTransactions title="Transaksi selesai" number="0" />
+                </div>
+                <div className="card-grid">
+                  <DetailTransactions title="Transaksi berjalan" number="0" />
+                </div>
+                <div className="card-grid">
+                  <DetailTransactions title="Transaksi batal" number="0" />
+                </div>
+                <div className="card-grid">
+                  <DetailTransactions title="Transaksi void" number="0" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </>

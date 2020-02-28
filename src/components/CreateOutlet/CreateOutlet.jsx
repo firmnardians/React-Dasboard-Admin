@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import ButtonBig from "../../components/button/ButtonBig";
-import "./createOutlet.css";
+import ButtonBig from "../Button/ButtonBig";
+import "./CreateOutlet.css";
 
 export class CreateOutlet extends Component {
   constructor(props) {
@@ -58,7 +58,11 @@ export class CreateOutlet extends Component {
           </div>
         </div>
 
-        <ButtonBig title="Create Outlet" onClick={this.createOutlet} />
+        <ButtonBig
+          title="Create Outlet"
+          className="mr-20"
+          onClick={this.createOutlet}
+        />
       </>
     );
   }

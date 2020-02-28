@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import DetailTransactions from "../../components/detail-transactions/DetailTransactions";
-import SellData from "../../components/dashboard-chart/SellData";
+import DetailTransactions from "../../components/DetailTransactions/DetailTransactions";
+import SellData from "../../components/Chart/SellData";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -40,7 +40,25 @@ class Dashboard extends Component {
             </div>
           </div>
 
-          <DetailTransactions className="mb-30" />
+          <div className="card-sub-app mb-20 text-center mt-30">
+            <div className="card-flex">
+              <div className="card-grid">
+                <DetailTransactions title="Total transaksi" number="0" />
+              </div>
+              <div className="card-grid">
+                <DetailTransactions title="Transaksi selesai" number="0" />
+              </div>
+              <div className="card-grid">
+                <DetailTransactions title="Transaksi berjalan" number="0" />
+              </div>
+              <div className="card-grid">
+                <DetailTransactions title="Transaksi batal" number="0" />
+              </div>
+              <div className="card-grid">
+                <DetailTransactions title="Transaksi void" number="0" />
+              </div>
+            </div>
+          </div>
           <hr className="mt-30 mb-30" />
           <SellData className="mt-30" />
         </div>

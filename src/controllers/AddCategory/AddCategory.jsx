@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Overlay from "../../components/overlay/Overlay";
-import "../../components/modal/modal.css";
-import Empty from "../../components/empty/Empty";
+import Overlay from "../../components/Overlay/Overlay";
+import Empty from "../../components/Empty/Empty";
 import { v4 as uuidv4 } from "uuid";
+
+import "../../components/Modal/Modal.css";
 
 export class AddCategory extends Component {
   constructor(props) {
