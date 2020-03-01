@@ -7,7 +7,11 @@ const Input = props => {
       <div className="card-input-modal">
         <input
           type={props.type}
-          className={props.className}
+          className={
+            props.className
+              ? "modal-input"
+              : "modal-input transition modal-input-active"
+          }
           name={props.name}
           id={props.id}
           value={props.value}

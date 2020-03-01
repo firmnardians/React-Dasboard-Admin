@@ -241,11 +241,3 @@ h6 {
   cursor: pointer;
 }
 /* cursor */
-
-.select-group {
-  font-size: 16px;
-  padding: 8px 12px;
-  border: 1px solid #333333;
-  border-radius: 4px;
-  font-weight: 600;
-}

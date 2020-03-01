@@ -161,11 +161,7 @@ export class AddBusiness extends Component {
 
           <div className="modal-content">
             <Input
-              className={
-                this.state.hideOverlayModal
-                  ? "modal-input"
-                  : "modal-input transition modal-input-active"
-              }
+              className={this.state.hideOverlayModal}
               title="Title"
               type="text"
               name="title"

@@ -1,4 +1,5 @@
 import React from "react";
+import "./DetailAccount.css";
 
 const DetailAccount = props => {
   return (
@@ -6,10 +7,10 @@ const DetailAccount = props => {
       <div className="card-account">
         <div className="card-flex">
           <div className="detail-info-account">
-            <h3>{props.title}</h3>
+            <h3>{props.info}</h3>
           </div>
           <div className="data-info-account">
-            <h3>{props.name}</h3>
+            <h3>{props.title}</h3>
           </div>
         </div>
       </div>

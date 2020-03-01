@@ -6,7 +6,9 @@ const Overlay = props => {
     <div>
       <div
         className={
-          props.className ? "overlay " : "overlay transition overlay-active "
+          props.className
+            ? "overlay "
+            : "overlay transition-overlay overlay-active "
         }
         onClick={props.onClick}
       ></div>

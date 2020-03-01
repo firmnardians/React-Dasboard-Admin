@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Notification from "../Notification/Notification";
-import CreateOutlet from "../CreateOutlet/CreateOutlet";
+import CreateOutlet from "../../controllers/CreateOutlet/CreateOutlet";
 import "./Navbar.css";
 
 class Navbar extends Component {

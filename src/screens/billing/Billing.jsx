@@ -1,12 +1,7 @@
 import React, { Component } from "react";
+import BillingBusiness from "../../controllers/BillingBusiness/BillingBusiness";
 
 export class Billing extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      business: ["All business", "Ayam Geprek", "Cofee Shop"]
-    };
-  }
   render() {
     return (
       <div className="card-content-app">
@@ -18,13 +13,7 @@ export class Billing extends Component {
             <h2>Select your business</h2>
           </div>
           <div className="my-business-select">
-            <select className="select-group" name="" id="">
-              {this.state.business.map(items => (
-                <option value={items} key={items}>
-                  {items}
-                </option>
-              ))}
-            </select>
+            <BillingBusiness />
           </div>
         </div>
       </div>
